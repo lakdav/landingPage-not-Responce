@@ -1,0 +1,11 @@
+.navigation {
+	&__list {
+		display: flex;
+		gap: 3rem;
+	}
+	&__link {
+		padding-inline: 0.3rem;
+		color: var(--clr-gray);
+		font-weight: 700;
+	}
+}
