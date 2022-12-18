@@ -47,10 +47,11 @@ module.exports = (args) => {
 			path: path.resolve(path.join(__dirname, 'dist')),
 			filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
 			assetModuleFilename: 'images/[hash][ext][query]',
-			clean: true,
+			// clean: true,
 		},
 		devtool: 'source-map',
 		devServer: {
+			liveReload: true,
 			open: true,
 			hot: true,
 			port: 5000,

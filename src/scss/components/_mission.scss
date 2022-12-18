@@ -1,0 +1,17 @@
+.mission {
+	width: 100%;
+	max-width: 29rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 1.5rem;
+
+	&__logo {
+		width: 4rem;
+	}
+	&__text {
+		text-align: center;
+		color: var(--clr-gray-700);
+	}
+}

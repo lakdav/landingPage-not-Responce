@@ -1,6 +1,6 @@
 .btn {
 	border: 1px solid transparent;
-	min-height: 5.2rem;
+	min-height: 4.5rem;
 	white-space: nowrap;
 	display: flex;
 	align-items: center;
@@ -16,10 +16,10 @@
 		align-items: center;
 		gap: 2.5rem;
 	}
-	&__primary {
+	&-primary {
 		background-color: var(--clr-primary);
 	}
-	&__outline {
+	&-outline {
 		background-color: transparent;
 		border: 1px solid var(--clr-light);
 	}
