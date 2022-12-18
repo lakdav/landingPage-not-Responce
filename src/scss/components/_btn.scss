@@ -1,0 +1,26 @@
+.btn {
+	border: 1px solid transparent;
+	min-height: 5.2rem;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	padding-inline: 4rem;
+	border-radius: 0.4rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1.8rem;
+	color: white;
+	cursor: pointer;
+	&__group {
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
+	}
+	&__primary {
+		background-color: var(--clr-primary);
+	}
+	&__outline {
+		background-color: transparent;
+		border: 1px solid var(--clr-light);
+	}
+}

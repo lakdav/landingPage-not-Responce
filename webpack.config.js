@@ -2,6 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 /** @returns {import('webpack').Configuration} */
+let htmlPageNames = [];
+let multipleHtmlPlugins = htmlPageNames.map((name) => {
+	return new HtmlWebpackPlugin({
+		template: `./src/${name}.html`, // relative path to the HTML files
+		filename: `${name}.html`, // output HTML files
+	});
+});
 
 module.exports = (args) => {
 	const { ts } = args;
@@ -13,7 +20,8 @@ module.exports = (args) => {
 		use: [styleLoader, 'css-loader', 'sass-loader'],
 	};
 	let target = 'web';
-	let plugins = [new HtmlWebpackPlugin({ template: './src/index.html', inject: 'body' })];
+
+	let plugins = [new HtmlWebpackPlugin({ template: './src/index.html', inject: 'body' }), ...multipleHtmlPlugins];
 	if (isProduction) {
 		plugins.push(
 			new MiniCssExtractPlugin({
@@ -43,7 +51,6 @@ module.exports = (args) => {
 		},
 		devtool: 'source-map',
 		devServer: {
-			liveReload: true,
 			open: true,
 			hot: true,
 			port: 5000,

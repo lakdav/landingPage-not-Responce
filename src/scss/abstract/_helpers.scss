@@ -2,3 +2,34 @@
 	width: min(123rem, 100% - 3.2rem);
 	margin-inline: auto;
 }
+.bg {
+	&--home {
+		background-image: url(../images/bg-image.jpg);
+	}
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: -1;
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}
+.paragraph {
+	font-size: 2rem;
+}
+.heading1 {
+	font-weight: 700;
+	font-size: 4.6rem;
+	color: var(--clr-grey);
+}
+.description {
+	color: var(--clr-grey-700);
+	font-size: 1.8rem;
+	letter-spacing: 0.4px;
+}

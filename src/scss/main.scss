@@ -2,7 +2,13 @@
 @forward './basic/reset';
 @forward './basic/basic';
 @forward './abstract/helpers';
+@forward './abstract/utils';
 @use './layout/header';
 @use './components/logo';
 @use './components/navigation';
 @use './components/contacts';
+@use './layout/hero';
+@use './components/slider';
+@use './components/btn';
+@use './layout/aboute';
+@use './components/video';
