@@ -1,0 +1,46 @@
+.fact {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	&__progress {
+		width: 14.8rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 0;
+	}
+	&__circle {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 7px solid rgb(var(--clr), 0.2);
+		border-radius: 50%;
+		z-index: -2;
+	}
+	svg circle {
+		position: absolute;
+		stroke: rgb(var(--clr));
+		width: 100%;
+		height: 100%;
+		stroke-width: 10px;
+		z-index: 1;
+		stroke-dasharray: calc(var(--dasharray) / 100 * var(--prog)) calc(var(--dasharray));
+		transform: rotate(-90deg);
+		transform-origin: center;
+	}
+	&__value {
+		color: var(--clr);
+		font-weight: bold;
+		font-size: 4rem;
+		letter-spacing: 2px;
+		position: absolute;
+	}
+	&__desc {
+		font-size: 14px;
+		color: var(--clr-gray-700);
+		text-align: center;
+	}
+}

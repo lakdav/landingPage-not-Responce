@@ -1,0 +1,39 @@
+.swiper {
+	height: 52rem;
+	padding-top: 7rem !important;
+	margin-top: -7rem;
+	&-slide {
+		box-sizing: border-box;
+		background-color: var(--clr-light);
+		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1),
+			0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+		border-radius: 4px;
+	}
+	.sw-button__buttons {
+		position: absolute;
+		top: 0;
+		right: 0;
+		gap: 0.1rem;
+		display: flex;
+		align-items: center;
+		z-index: 10;
+	}
+	&__title {
+		background-color: var(-clr-gray-700);
+	}
+	.sw-button {
+		width: 5rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			background-color: var(--clr-primary);
+			color: var(--clr-light);
+		}
+	}
+}

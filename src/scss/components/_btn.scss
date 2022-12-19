@@ -22,5 +22,9 @@
 	&-outline {
 		background-color: transparent;
 		border: 1px solid var(--clr-light);
+		&-primary {
+			border: 1px solid var(--clr-primary);
+			color: var(--clr-primary);
+		}
 	}
 }

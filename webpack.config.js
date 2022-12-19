@@ -51,10 +51,13 @@ module.exports = (args) => {
 		},
 		devtool: 'source-map',
 		devServer: {
-			liveReload: true,
+			liveReload: false,
 			open: true,
 			hot: true,
 			port: 5000,
+			static: {
+				directory: path.join(__dirname, 'dist'),
+			},
 		},
 		module: {
 			rules: [

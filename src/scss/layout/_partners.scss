@@ -1,0 +1,18 @@
+.partners {
+	background-color: var(--clr-gray-200);
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&-items {
+			&__link {
+				display: block;
+				cursor: pointer;
+				transition: transform 0.3s;
+				&:hover {
+					transform: translateY(-5px);
+				}
+			}
+		}
+	}
+}
