@@ -1,0 +1,22 @@
+.news {
+	&__layout {
+		margin-bottom: 10rem;
+		display: grid;
+		grid-template-columns: 6fr 4fr;
+		grid-auto-rows: min-content;
+		gap: 2rem;
+		& > * {
+			&:nth-child(1) {
+				grid-column: 1;
+				grid-row: span 2;
+			}
+		}
+	}
+
+	&__explore {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: center;
+	}
+}
